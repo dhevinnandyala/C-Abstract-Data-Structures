@@ -101,11 +101,39 @@ void addTail(LinkedList *this, int data) {
 
 /* Search Functions */
 
-bool contains();
+bool contains(LinkedList *this, int data) {
+    struct Node *cur = getHeadPointer(this);
+    while (cur != 0) {
+        if (getData(cur) == data) {
+            return true;
+        } else {
+            cur = getRight(cur);
+        }
+    } return false;
+}
 
-int count();
+int count(LinkedList *this, int data) {
+    struct Node *cur = getHeadPointer(this);
+    int count = 0;
+    while (cur != 0) {
+        if (getData(cur) == data) {
+            count++;
+        }
+        cur = getRight(cur);
+    }
+    return count;
+}
 
-struct Node* getNode();
+struct Node* getNode(LinkedList *this, int data) {
+    struct Node *cur = getHeadPointer(this);
+    while (cur != 0) {
+        if (getData(cur) == data) {
+            return cur;
+        } else {
+            cur = getRight(cur);
+        }
+    } return 0;
+}
 
 /* Remove functions */
 
