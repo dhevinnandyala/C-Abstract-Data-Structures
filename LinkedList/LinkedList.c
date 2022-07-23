@@ -1,5 +1,122 @@
 //
 // Created by Dhevin N on 22/7/22.
 //
-
 #include "LinkedList.h"
+#include "../Node/Node.c"
+
+typedef struct {
+    struct Node *head;
+    struct Node *tail;
+    bool isEmpty;
+    bool hasHead;
+    bool hasTail;
+    int size;
+} LinkedList;
+
+void initLinkedList(LinkedList *this, int data) {
+    struct Node newNode;
+    initNode(&newNode, data);
+    this->head = &newNode;
+    this->tail = &newNode;
+    this->isEmpty = false;
+    this->hasHead = true;
+    this->hasTail = true;
+    this->size = 1;
+}
+
+/* State Functions */
+
+bool isEmpty(LinkedList *this) {
+    return this->isEmpty;
+}
+
+bool hasHead(LinkedList *this) {
+    return this->hasHead;
+}
+
+bool hasTail(LinkedList *this) {
+    return this->hasTail;
+}
+
+/* Get Functions */
+
+int getSize(LinkedList *this) {
+    return this->size;
+}
+
+int peekHead(LinkedList *this) {
+    if (this->hasHead) {
+        return getData(this->head);
+    }
+    return INT32_MIN;
+}
+
+int peekTail(LinkedList *this) {
+    if(this->hasHead) {
+        return getData(this->head);
+    }
+    return INT32_MIN;
+}
+
+struct Node* getHeadPointer(LinkedList *this) {
+    if (this->hasHead) {
+        return this->head;
+    }
+    return 0;
+}
+
+struct Node* getTailPointer(LinkedList *this) {
+    if(this->hasTail) {
+        return this->tail;
+    }
+    return 0;
+}
+
+/* Add Functions */
+
+void addHead(LinkedList *this, int data) {
+    if (getSize(this) == 0) {
+        initLinkedList(this, data);
+        return;
+    }
+    struct Node new;
+    initNode(&new, data);
+    setRight(&new, this->head);
+
+    this->head = &new;
+}
+
+void addTail(LinkedList *this, int data) {
+    if (getSize(this) == 0) {
+        initLinkedList(this, data);
+        return;
+    }
+
+    struct Node new;
+    initNode(&new, data);
+    setLeft(&new, this->tail);
+
+    this->tail = &new;
+}
+
+/* Search Functions */
+
+bool contains();
+
+int count();
+
+struct Node* getNode();
+
+/* Remove functions */
+
+int removeHead();
+
+int removeTail();
+
+int remove();
+
+/* Sort functions */ //todo: implement these-- use Merge Sort? Or maybe in some cases it's faster to copy it
+
+void sort();
+
+void reverse();

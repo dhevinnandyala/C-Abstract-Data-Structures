@@ -8,32 +8,32 @@
 #include "stdlib.h"
 #include "stdbool.h"
 
-struct node;
+struct Node;
 
-void initNode(struct node *this, int data);
+void initNode(struct Node *this, int data);
 
 /* Set Function */
 
-void setData(struct node *this, int data);
+void setData(struct Node *this, int data);
 
-void setLeft(struct node *this, struct node *left);
+void setLeft(struct Node *this, struct Node *left);
 
-void setRight(struct node *this, struct node *right);
+void setRight(struct Node *this, struct Node *right);
 
 /* Boolean functions */
 
-bool hasLeft(struct node *this);
+bool hasLeft(struct Node *this);
 
-bool hasRight(struct node *this);
+bool hasRight(struct Node *this);
 
-bool hasData(struct node *this);
+bool hasData(struct Node *this);
 
 /* Get Functions */
 
-int getData(struct node *this);
+int getData(struct Node *this);
 
-struct node *getLeft(struct node *this);
+struct Node *getLeft(struct Node *this);
 
-struct node *getRight(struct node *this);
+struct Node *getRight(struct Node *this);
 
 #endif //C_ADTS_NODE_H

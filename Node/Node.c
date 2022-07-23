@@ -1,19 +1,21 @@
 #include "Node.h"
 
-struct node {
+struct Node {
     int *data;
-    struct node *left;
-    struct node *right;
+    struct Node *left;
+    struct Node *right;
     bool hasLeft;
     bool hasRight;
     bool hasData;
 };
 
-void initNode(struct node *this, int data) {
+void initNode(struct Node *this, int data) {
     this->data = calloc(1, sizeof(int));
     *this->data = data;
-    this->left = NULL;
-    this->right = NULL;
+    this->left = calloc(1, sizeof (struct Node));
+    this->left = 0;
+    this->right = calloc(1, sizeof (struct Node));
+    this->right = 0;
     this->hasLeft = false;
     this->hasRight = false;
     this->hasData = false;
@@ -21,53 +23,53 @@ void initNode(struct node *this, int data) {
 
 /* Set Function */
 
-void setData(struct node *this, int data) {
+void setData(struct Node *this, int data) {
     *this->data = data;
     this->hasData = true;
 }
 
-void setLeft(struct node *this, struct node *left) {
-    this->left = calloc(1, sizeof(struct node *));
+void setLeft(struct Node *this, struct Node *left) {
+    this->left = calloc(1, sizeof(struct Node *));
     this->left = left;
     this->hasLeft = true;
 }
 
-void setRight(struct node *this, struct node *right) {
+void setRight(struct Node *this, struct Node *right) {
     this->right = right;
     this->hasRight = true;
 }
 
 /* Boolean functions */
 
-bool hasLeft(struct node *this) {
+bool hasLeft(struct Node *this) {
     return this->hasLeft;
 }
 
-bool hasRight(struct node *this) {
+bool hasRight(struct Node *this) {
     return this->hasRight;
 }
 
-bool hasData(struct node *this) {
+bool hasData(struct Node *this) {
     return this->hasData;
 }
 
 /* Get Functions */
 
-int getData(struct node *this) {
+int getData(struct Node *this) {
     if (hasData(this)) {
         return *this->data;
     }
     return INT32_MIN;
 }
 
-struct node *getLeft(struct node *this) {
+struct Node *getLeft(struct Node *this) {
     if (hasLeft(this)) {
         return this->left;
     }
     return 0;
 }
 
-struct node *getRight(struct node *this) {
+struct Node *getRight(struct Node *this) {
     if (hasRight(this)) {
         return this->right;
     }
