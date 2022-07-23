@@ -1,7 +1,6 @@
 //
 // Created by Dhevin N on 22/7/22.
 //
-#include "LinkedList.h"
 #include "../Node/Node.c"
 
 typedef struct {
