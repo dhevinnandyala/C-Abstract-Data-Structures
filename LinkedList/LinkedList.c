@@ -84,6 +84,7 @@ void addHead(LinkedList *this, int data) {
     setRight(&new, this->head);
 
     this->head = &new;
+    this->size++;
 }
 
 void addTail(LinkedList *this, int data) {
@@ -97,6 +98,7 @@ void addTail(LinkedList *this, int data) {
     setLeft(&new, this->tail);
 
     this->tail = &new;
+    this->size++;
 }
 
 /* Search Functions */
@@ -137,7 +139,16 @@ struct Node* getNode(LinkedList *this, int data) {
 
 /* Remove functions */
 
-int removeHead();
+int removeHead(LinkedList *this) {
+    int data = peekHead(this);
+    if (getSize(this) == 0) return INT32_MIN;
+    if (getSize(this) == 1) {
+        this->tail = NULL;
+    }
+    this->head = getRight(this->head);
+    this->size--;
+    return data;
+}
 
 int removeTail();
 
