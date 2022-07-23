@@ -7,7 +7,6 @@
 typedef struct {
     struct Node *head;
     struct Node *tail;
-    bool isEmpty;
     bool hasHead;
     bool hasTail;
     int size;
@@ -18,7 +17,6 @@ void initLinkedList(LinkedList *this, int data) {
     initNode(&newNode, data);
     this->head = &newNode;
     this->tail = &newNode;
-    this->isEmpty = false;
     this->hasHead = true;
     this->hasTail = true;
     this->size = 1;
@@ -27,7 +25,9 @@ void initLinkedList(LinkedList *this, int data) {
 /* State Functions */
 
 bool isEmpty(LinkedList *this) {
-    return this->isEmpty;
+    if (this->size == 0) {
+        return true;
+    } return false;
 }
 
 bool hasHead(LinkedList *this) {
@@ -150,9 +150,42 @@ int removeHead(LinkedList *this) {
     return data;
 }
 
-int removeTail();
+int removeTail(LinkedList *this) {
+    int data = peekHead(this);
+    if (getSize(this) == 0) return INT32_MIN;
+    if (getSize(this) == 1) this->head = NULL;
+    this->tail = getLeft(this->tail);
+    return data;
+}
 
-int remove();
+bool remove(LinkedList *this, int data) {
+    struct Node *thisNode = getNode(this, data);
+    if (thisNode == 0) return false;
+
+    if (getSize(this) == 1) {
+        this->head = NULL;
+        this->tail = NULL;
+        this->size = 0;
+        this->hasHead = false;
+        this->hasTail = false;
+        return true;
+    }
+
+    if (getHeadPointer(this) == thisNode) {
+        removeHead(this);
+        return true;
+    }
+
+    if (getTailPointer(this) == thisNode) {
+        removeTail(this);
+        return false;
+    }
+
+    setRight(getLeft(thisNode), getRight(thisNode));
+    setLeft(getRight(thisNode), getLeft(thisNode));
+    free(thisNode);
+    return true;
+}
 
 /* Sort functions */ //todo: implement these-- use Merge Sort? Or maybe in some cases it's faster to copy it
 

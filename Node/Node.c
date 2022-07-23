@@ -32,11 +32,21 @@ void setLeft(struct Node *this, struct Node *left) {
     this->left = calloc(1, sizeof(struct Node *));
     this->left = left;
     this->hasLeft = true;
+
+    if (left == NULL) {
+        this->hasLeft = false;
+        free(this->left);
+    }
 }
 
 void setRight(struct Node *this, struct Node *right) {
     this->right = right;
     this->hasRight = true;
+
+    if (right == NULL) {
+        this->hasRight = false;
+        free(this->right);
+    }
 }
 
 /* Boolean functions */
