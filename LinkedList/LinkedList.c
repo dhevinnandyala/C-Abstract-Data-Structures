@@ -23,7 +23,7 @@ void initLinkedList(LinkedList *this, int data) {
 
 /* State Functions */
 
-bool isEmpty(LinkedList *this) {
+__attribute__((unused)) bool isEmpty(LinkedList *this) {
     if (this->size == 0) {
         return true;
     } return false;

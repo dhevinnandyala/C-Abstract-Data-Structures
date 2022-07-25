@@ -9,8 +9,15 @@
 
 int peek(LinkedList *this);
 
-int dequeue(LinkedList *this);
+int pop(LinkedList *this);
 
-int enqueue(LinkedList *this);
+int push(LinkedList *this, int data);
+
+struct Node* getTopNode(LinkedList *this);
+
+//isEmpty
+
+
+
 
 #endif //C_ADTS_STACK_H
