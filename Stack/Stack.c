@@ -7,20 +7,14 @@ void initStack(LinkedList *this, int data) {
     initLinkedList(this, data);
 }
 
-int peek(LinkedList *this) {
+int stackPeek(LinkedList *this) {
     return peekHead(this);
 }
 
-int pop(LinkedList *this) {
-    int data = peek(this);
-    removeHead(this);
-    return data;
+int stackPop(LinkedList *this) {
+    return removeHead(this);
 }
 
-void push(LinkedList *this, int data) {
+void stackPush(LinkedList *this, int data) {
     addHead(this, data);
-}
-
-struct Node* getTopNode(LinkedList *this) {
-   return getHeadPointer(this);
 }

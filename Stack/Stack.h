@@ -7,17 +7,16 @@
 
 #include "../LinkedList/LinkedList.c"
 
-int peek(LinkedList *this);
+//extends LinkedList
 
-int pop(LinkedList *this);
+int stackPeek(LinkedList *this);
 
-int push(LinkedList *this, int data);
+int stackPop(LinkedList *this);
 
-struct Node* getTopNode(LinkedList *this);
+int stackPush(LinkedList *this, int data);
 
-//isEmpty
+//isEmpty (use LinkedList isEmpty)
 
-
-
+//getSize (Use LinkedList getSize)
 
 #endif //C_ADTS_STACK_H
