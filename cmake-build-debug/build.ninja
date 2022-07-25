@@ -79,6 +79,12 @@ build CMakeFiles/C_ADTs.dir/Queue/Queue.c.o: C_COMPILER__C_ADTs_Debug /Users/dhe
   OBJECT_DIR = CMakeFiles/C_ADTs.dir
   OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Queue
 
+build CMakeFiles/C_ADTs.dir/PriorityQueue/PriorityQueue.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/PriorityQueue/PriorityQueue.c || cmake_object_order_depends_target_C_ADTs
+  DEP_FILE = CMakeFiles/C_ADTs.dir/PriorityQueue/PriorityQueue.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu2x
+  OBJECT_DIR = CMakeFiles/C_ADTs.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/PriorityQueue
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target C_ADTs
@@ -87,7 +93,7 @@ build CMakeFiles/C_ADTs.dir/Queue/Queue.c.o: C_COMPILER__C_ADTs_Debug /Users/dhe
 #############################################
 # Link the static library libC_ADTs.a
 
-build libC_ADTs.a: C_STATIC_LIBRARY_LINKER__C_ADTs_Debug CMakeFiles/C_ADTs.dir/ADT_Library.c.o CMakeFiles/C_ADTs.dir/Node/Node.c.o CMakeFiles/C_ADTs.dir/LinkedList/LinkedList.c.o CMakeFiles/C_ADTs.dir/Stack/Stack.c.o CMakeFiles/C_ADTs.dir/Queue/Queue.c.o
+build libC_ADTs.a: C_STATIC_LIBRARY_LINKER__C_ADTs_Debug CMakeFiles/C_ADTs.dir/ADT_Library.c.o CMakeFiles/C_ADTs.dir/Node/Node.c.o CMakeFiles/C_ADTs.dir/LinkedList/LinkedList.c.o CMakeFiles/C_ADTs.dir/Stack/Stack.c.o CMakeFiles/C_ADTs.dir/Queue/Queue.c.o CMakeFiles/C_ADTs.dir/PriorityQueue/PriorityQueue.c.o
   ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/C_ADTs.dir
