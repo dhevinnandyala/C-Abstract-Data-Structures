@@ -101,5 +101,3 @@ void listSort(List *this) {
 void listReverse (List *this) {
     //todo
 }
-
-#include "List.h"
