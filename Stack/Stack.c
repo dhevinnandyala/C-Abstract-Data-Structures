@@ -8,13 +8,13 @@ void initStack(LinkedList *this, int data) {
 }
 
 int stackPeek(LinkedList *this) {
-    return peekHead(this);
+    return linkedListPeekHead(this);
 }
 
 int stackPop(LinkedList *this) {
-    return removeHead(this);
+    return linkedListRemoveHead(this);
 }
 
 void stackPush(LinkedList *this, int data) {
-    addHead(this, data);
+    linkedListAddHead(this, data);
 }

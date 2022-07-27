@@ -15,8 +15,8 @@ int stackPop(LinkedList *this);
 
 int stackPush(LinkedList *this, int data);
 
-//isEmpty (use LinkedList isEmpty)
+//isEmpty (use LinkedList linkedListIsEmpty)
 
-//getSize (Use LinkedList getSize)
+//getSize (Use LinkedList linkedListGetSize)
 
 #endif //C_ADTS_STACK_H

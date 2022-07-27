@@ -8,13 +8,13 @@ void initQueue(LinkedList *this, int data) {
 }
 
 int queuePeek(LinkedList *this) {
-    return peekTail(this);
+    return linkedListPeekTail(this);
 }
 
 int queueDequeue(LinkedList *this) {
-    return removeTail(this);
+    return linkedListRemoveTail(this);
 }
 
 void queueEnqueue(LinkedList *this, int data) {
-    addHead(this, data);
+    linkedListAddHead(this, data);
 }

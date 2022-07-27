@@ -61,8 +61,8 @@ bool remove(LinkedList *this, int data);
 
 /* Sort functions */
 
-void sort();
+void linkedListSort();
 
-void reverse();
+void linkedListReverse();
 
 #endif //C_ADTS_LINKEDLIST_H

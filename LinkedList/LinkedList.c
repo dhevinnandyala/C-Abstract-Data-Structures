@@ -23,48 +23,48 @@ void initLinkedList(LinkedList *this, int data) {
 
 /* State Functions */
 
-__attribute__((unused)) bool isEmpty(LinkedList *this) {
+__attribute__((unused)) bool linkedListIsEmpty(LinkedList *this) {
     if (this->size == 0) {
         return true;
     } return false;
 }
 
-bool hasHead(LinkedList *this) {
+bool linkedListHasHead(LinkedList *this) {
     return this->hasHead;
 }
 
-bool hasTail(LinkedList *this) {
+bool linkedListHasTail(LinkedList *this) {
     return this->hasTail;
 }
 
 /* Get Functions */
 
-int getSize(LinkedList *this) {
+int linkedListGetSize(LinkedList *this) {
     return this->size;
 }
 
-int peekHead(LinkedList *this) {
+int linkedListPeekHead(LinkedList *this) {
     if (this->hasHead) {
         return getData(this->head);
     }
     return INT32_MIN;
 }
 
-int peekTail(LinkedList *this) {
+int linkedListPeekTail(LinkedList *this) {
     if(this->hasHead) {
         return getData(this->head);
     }
     return INT32_MIN;
 }
 
-struct Node* getHeadPointer(LinkedList *this) {
+struct Node* linkedListGetHeadPointer(LinkedList *this) {
     if (this->hasHead) {
         return this->head;
     }
     return 0;
 }
 
-struct Node* getTailPointer(LinkedList *this) {
+struct Node* linkedListGetTailPointer(LinkedList *this) {
     if(this->hasTail) {
         return this->tail;
     }
@@ -73,8 +73,8 @@ struct Node* getTailPointer(LinkedList *this) {
 
 /* Add Functions */
 
-void addHead(LinkedList *this, int data) {
-    if (getSize(this) == 0) {
+void linkedListAddHead(LinkedList *this, int data) {
+    if (linkedListGetSize(this) == 0) {
         initLinkedList(this, data);
         return;
     }
@@ -86,8 +86,8 @@ void addHead(LinkedList *this, int data) {
     this->size++;
 }
 
-void addTail(LinkedList *this, int data) {
-    if (getSize(this) == 0) {
+void linkedListAddTail(LinkedList *this, int data) {
+    if (linkedListGetSize(this) == 0) {
         initLinkedList(this, data);
         return;
     }
@@ -102,8 +102,8 @@ void addTail(LinkedList *this, int data) {
 
 /* Search Functions */
 
-bool contains(LinkedList *this, int data) {
-    struct Node *cur = getHeadPointer(this);
+bool linkedListContains(LinkedList *this, int data) {
+    struct Node *cur = linkedListGetHeadPointer(this);
     while (cur != 0) {
         if (getData(cur) == data) {
             return true;
@@ -113,8 +113,8 @@ bool contains(LinkedList *this, int data) {
     } return false;
 }
 
-int count(LinkedList *this, int data) {
-    struct Node *cur = getHeadPointer(this);
+int linkedListCount(LinkedList *this, int data) {
+    struct Node *cur = linkedListGetHeadPointer(this);
     int count = 0;
     while (cur != 0) {
         if (getData(cur) == data) {
@@ -125,8 +125,8 @@ int count(LinkedList *this, int data) {
     return count;
 }
 
-struct Node* getNode(LinkedList *this, int data) {
-    struct Node *cur = getHeadPointer(this);
+struct Node* linkedListGetNode(LinkedList *this, int data) {
+    struct Node *cur = linkedListGetHeadPointer(this);
     while (cur != 0) {
         if (getData(cur) == data) {
             return cur;
@@ -138,10 +138,10 @@ struct Node* getNode(LinkedList *this, int data) {
 
 /* Remove functions */
 
-int removeHead(LinkedList *this) {
-    int data = peekHead(this);
-    if (getSize(this) == 0) return INT32_MIN;
-    if (getSize(this) == 1) {
+int linkedListRemoveHead(LinkedList *this) {
+    int data = linkedListPeekHead(this);
+    if (linkedListGetSize(this) == 0) return INT32_MIN;
+    if (linkedListGetSize(this) == 1) {
         this->tail = NULL;
     }
     this->head = getRight(this->head);
@@ -149,19 +149,19 @@ int removeHead(LinkedList *this) {
     return data;
 }
 
-int removeTail(LinkedList *this) {
-    int data = peekHead(this);
-    if (getSize(this) == 0) return INT32_MIN;
-    if (getSize(this) == 1) this->head = NULL;
+int linkedListRemoveTail(LinkedList *this) {
+    int data = linkedListPeekHead(this);
+    if (linkedListGetSize(this) == 0) return INT32_MIN;
+    if (linkedListGetSize(this) == 1) this->head = NULL;
     this->tail = getLeft(this->tail);
     return data;
 }
 
-bool remove(LinkedList *this, int data) {
-    struct Node *thisNode = getNode(this, data);
+bool linkedListRemove(LinkedList *this, int data) {
+    struct Node *thisNode = linkedListGetNode(this, data);
     if (thisNode == 0) return false;
 
-    if (getSize(this) == 1) {
+    if (linkedListGetSize(this) == 1) {
         this->head = NULL;
         this->tail = NULL;
         this->size = 0;
@@ -170,13 +170,13 @@ bool remove(LinkedList *this, int data) {
         return true;
     }
 
-    if (getHeadPointer(this) == thisNode) {
-        removeHead(this);
+    if (linkedListGetHeadPointer(this) == thisNode) {
+        linkedListRemoveHead(this);
         return true;
     }
 
-    if (getTailPointer(this) == thisNode) {
-        removeTail(this);
+    if (linkedListGetTailPointer(this) == thisNode) {
+        linkedListRemoveTail(this);
         return false;
     }
 
@@ -188,6 +188,6 @@ bool remove(LinkedList *this, int data) {
 
 /* Sort functions */ //todo: implement these-- use Merge Sort? Or maybe in some cases it's faster to copy it
 
-void sort();
+void linkedListSort();
 
-void reverse();
+void linkedListReverse();
