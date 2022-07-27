@@ -5,7 +5,7 @@
 #include "stdlib.h"
 #include "stdbool.h"
 
-typedef struct pqNode {
+struct pqNode {
     int priority;
     int value;
 
@@ -39,6 +39,7 @@ int PriorityQueueDequeue(PriorityQueue *this) {
 
 int PriorityQueueEnqueue(PriorityQueue *this, int data, int priority) {
     //todo
+    return 0;
 }
 
 #include "PriorityQueue.h"
