@@ -82,7 +82,13 @@ int listCount (List *this, int value) {
 
 /* Sort Functions */
 void listSwap (int *x, int *y) {
-    //todo
+    if (x == y) return;
+
+    int a = *x;
+    int b = *y;
+
+    *x = b;
+    *y = a;
 }
 
 int listPartition (int *a, int l, int h) {
@@ -99,5 +105,7 @@ void listSort(List *this) {
 }
 
 void listReverse (List *this) {
-    //todo
+    for (int i = 0; i < ((this->size + 1 / 2)); i++) {
+        listSwap(&this->list[i], &this->list[this->size - i]);
+    }
 }
