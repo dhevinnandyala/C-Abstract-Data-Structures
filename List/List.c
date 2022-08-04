@@ -76,8 +76,13 @@ bool listContains (List *this, int value) {
 }
 
 int listCount (List *this, int value) {
-    //todo
-    return -1;
+    int count = 0;
+    for (int i = 0; i < this->size; i++) {
+        if (this->list[i] == value) {
+            count++;
+        }
+    }
+    return count;
 }
 
 /* Sort Functions */
