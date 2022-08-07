@@ -1,7 +1,7 @@
 //
 // Created by Dhevin N on 22/7/22.
 //
-#include "../Node/Node.c"
+#include "../../Node/Node.c"
 
 typedef struct {
     struct Node *head;

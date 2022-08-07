@@ -55,35 +55,35 @@ build CMakeFiles/C_ADTs.dir/ADT_Library.c.o: C_COMPILER__C_ADTs_Debug /Users/dhe
   OBJECT_DIR = CMakeFiles/C_ADTs.dir
   OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir
 
-build CMakeFiles/C_ADTs.dir/Node/Node.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/Node/Node.c || cmake_object_order_depends_target_C_ADTs
-  DEP_FILE = CMakeFiles/C_ADTs.dir/Node/Node.c.o.d
+build CMakeFiles/C_ADTs.dir/Linked_Lists/Node/Node.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/Linked$ Lists/Node/Node.c || cmake_object_order_depends_target_C_ADTs
+  DEP_FILE = CMakeFiles/C_ADTs.dir/Linked_Lists/Node/Node.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu2x
   OBJECT_DIR = CMakeFiles/C_ADTs.dir
-  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Node
+  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Linked_Lists/Node
 
-build CMakeFiles/C_ADTs.dir/LinkedList/LinkedList.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/LinkedList/LinkedList.c || cmake_object_order_depends_target_C_ADTs
-  DEP_FILE = CMakeFiles/C_ADTs.dir/LinkedList/LinkedList.c.o.d
+build CMakeFiles/C_ADTs.dir/Linked_Lists/LinkedList/LinkedList.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/Linked$ Lists/LinkedList/LinkedList.c || cmake_object_order_depends_target_C_ADTs
+  DEP_FILE = CMakeFiles/C_ADTs.dir/Linked_Lists/LinkedList/LinkedList.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu2x
   OBJECT_DIR = CMakeFiles/C_ADTs.dir
-  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/LinkedList
+  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Linked_Lists/LinkedList
 
-build CMakeFiles/C_ADTs.dir/Stack/Stack.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/Stack/Stack.c || cmake_object_order_depends_target_C_ADTs
-  DEP_FILE = CMakeFiles/C_ADTs.dir/Stack/Stack.c.o.d
+build CMakeFiles/C_ADTs.dir/Linked_Lists/Stack/Stack.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/Linked$ Lists/Stack/Stack.c || cmake_object_order_depends_target_C_ADTs
+  DEP_FILE = CMakeFiles/C_ADTs.dir/Linked_Lists/Stack/Stack.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu2x
   OBJECT_DIR = CMakeFiles/C_ADTs.dir
-  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Stack
+  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Linked_Lists/Stack
 
-build CMakeFiles/C_ADTs.dir/Queue/Queue.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/Queue/Queue.c || cmake_object_order_depends_target_C_ADTs
-  DEP_FILE = CMakeFiles/C_ADTs.dir/Queue/Queue.c.o.d
+build CMakeFiles/C_ADTs.dir/Linked_Lists/Queue/Queue.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/Linked$ Lists/Queue/Queue.c || cmake_object_order_depends_target_C_ADTs
+  DEP_FILE = CMakeFiles/C_ADTs.dir/Linked_Lists/Queue/Queue.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu2x
   OBJECT_DIR = CMakeFiles/C_ADTs.dir
-  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Queue
+  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Linked_Lists/Queue
 
-build CMakeFiles/C_ADTs.dir/PriorityQueue/PriorityQueue.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/PriorityQueue/PriorityQueue.c || cmake_object_order_depends_target_C_ADTs
-  DEP_FILE = CMakeFiles/C_ADTs.dir/PriorityQueue/PriorityQueue.c.o.d
+build CMakeFiles/C_ADTs.dir/Linked_Lists/PriorityQueue/PriorityQueue.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/Linked$ Lists/PriorityQueue/PriorityQueue.c || cmake_object_order_depends_target_C_ADTs
+  DEP_FILE = CMakeFiles/C_ADTs.dir/Linked_Lists/PriorityQueue/PriorityQueue.c.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu2x
   OBJECT_DIR = CMakeFiles/C_ADTs.dir
-  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/PriorityQueue
+  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Linked_Lists/PriorityQueue
 
 build CMakeFiles/C_ADTs.dir/List/List.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/List/List.c || cmake_object_order_depends_target_C_ADTs
   DEP_FILE = CMakeFiles/C_ADTs.dir/List/List.c.o.d
@@ -97,6 +97,18 @@ build CMakeFiles/C_ADTs.dir/HashMap/HashMap.c.o: C_COMPILER__C_ADTs_Debug /Users
   OBJECT_DIR = CMakeFiles/C_ADTs.dir
   OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/HashMap
 
+build CMakeFiles/C_ADTs.dir/Trees/BinaryTree/BinaryTree.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/Trees/BinaryTree/BinaryTree.c || cmake_object_order_depends_target_C_ADTs
+  DEP_FILE = CMakeFiles/C_ADTs.dir/Trees/BinaryTree/BinaryTree.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu2x
+  OBJECT_DIR = CMakeFiles/C_ADTs.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Trees/BinaryTree
+
+build CMakeFiles/C_ADTs.dir/Trees/BinaryTreeNode/BinaryTreeNode.c.o: C_COMPILER__C_ADTs_Debug /Users/dhevin/Desktop/Programming_stuff/C_ADTs/Trees/BinaryTreeNode/BinaryTreeNode.c || cmake_object_order_depends_target_C_ADTs
+  DEP_FILE = CMakeFiles/C_ADTs.dir/Trees/BinaryTreeNode/BinaryTreeNode.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1 -std=gnu2x
+  OBJECT_DIR = CMakeFiles/C_ADTs.dir
+  OBJECT_FILE_DIR = CMakeFiles/C_ADTs.dir/Trees/BinaryTreeNode
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target C_ADTs
@@ -105,7 +117,7 @@ build CMakeFiles/C_ADTs.dir/HashMap/HashMap.c.o: C_COMPILER__C_ADTs_Debug /Users
 #############################################
 # Link the static library libC_ADTs.a
 
-build libC_ADTs.a: C_STATIC_LIBRARY_LINKER__C_ADTs_Debug CMakeFiles/C_ADTs.dir/ADT_Library.c.o CMakeFiles/C_ADTs.dir/Node/Node.c.o CMakeFiles/C_ADTs.dir/LinkedList/LinkedList.c.o CMakeFiles/C_ADTs.dir/Stack/Stack.c.o CMakeFiles/C_ADTs.dir/Queue/Queue.c.o CMakeFiles/C_ADTs.dir/PriorityQueue/PriorityQueue.c.o CMakeFiles/C_ADTs.dir/List/List.c.o CMakeFiles/C_ADTs.dir/HashMap/HashMap.c.o
+build libC_ADTs.a: C_STATIC_LIBRARY_LINKER__C_ADTs_Debug CMakeFiles/C_ADTs.dir/ADT_Library.c.o CMakeFiles/C_ADTs.dir/Linked_Lists/Node/Node.c.o CMakeFiles/C_ADTs.dir/Linked_Lists/LinkedList/LinkedList.c.o CMakeFiles/C_ADTs.dir/Linked_Lists/Stack/Stack.c.o CMakeFiles/C_ADTs.dir/Linked_Lists/Queue/Queue.c.o CMakeFiles/C_ADTs.dir/Linked_Lists/PriorityQueue/PriorityQueue.c.o CMakeFiles/C_ADTs.dir/List/List.c.o CMakeFiles/C_ADTs.dir/HashMap/HashMap.c.o CMakeFiles/C_ADTs.dir/Trees/BinaryTree/BinaryTree.c.o CMakeFiles/C_ADTs.dir/Trees/BinaryTreeNode/BinaryTreeNode.c.o
   ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -mmacosx-version-min=12.1
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = CMakeFiles/C_ADTs.dir

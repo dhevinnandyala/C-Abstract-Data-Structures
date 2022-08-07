@@ -5,7 +5,7 @@
 #ifndef C_ADTS_LINKEDLIST_H
 #define C_ADTS_LINKEDLIST_H
 
-#include "../Node/Node.c"
+#include "../../Node/Node.c"
 
 typedef struct {
     struct Node *head;
